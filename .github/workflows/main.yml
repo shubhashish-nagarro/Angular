@@ -3,6 +3,7 @@ name: Angular Application
 on:
   push:
     branches: [ main ]
+  workflow_dispatch:
 
 jobs:
   Build-Angular:
@@ -27,3 +28,7 @@ jobs:
         with:
           name: angular-artifact
           path: dist
+        
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
