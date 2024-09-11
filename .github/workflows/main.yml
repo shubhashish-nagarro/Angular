@@ -1,4 +1,4 @@
-name: Angular Application
+name: Deploy Angular Application
 
 on:
   push:
